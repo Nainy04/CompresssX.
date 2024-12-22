@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced File Compressor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">CompressX</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#upload">Upload</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="upload" class="container">
+            <h1>File Compressor</h1>
+            <p>Compress <strong>TXT</strong>, <strong>DOC</strong>, <strong>JPEG</strong>, and <strong>PNG</strong> files with custom algorithms!</p>
+
+            <div class="file-upload">
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <label for="file" class="upload-label">Select a file to compress:</label>
+                    <input type="file" name="file" id="file" accept=".txt,.doc,.jpeg,.png" required>
+                    <button type="submit">Compress</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About CompressX</h2>
+            <p>CompressX uses advanced algorithms like Huffman Encoding and Run-Length Encoding to provide efficient compression for text and image files. Designed for DSA projects, it demonstrates the power of custom data structures and algorithms.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CompressX. All rights reserved.</p>
+    </footer>
+</body>
+</html>

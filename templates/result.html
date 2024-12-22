@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compression Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">CompressX</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h1>Compression Complete!</h1>
+            <p>Original Size: <strong>{{ original_size }} bytes</strong></p>
+            <p>Compressed Size: <strong>{{ compressed_size }} bytes</strong></p>
+            <p>Compression Ratio: <strong>{{ compression_ratio }}%</strong></p>
+
+            <div class="actions">
+                <a href="/download" class="button">Download Compressed File</a>
+                <a href="/" class="button">Compress Another File</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CompressX. All rights reserved.</p>
+    </footer>
+</body>
+</html>
